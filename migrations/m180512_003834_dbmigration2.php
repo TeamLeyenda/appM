@@ -1,18 +1,20 @@
 <?php
 
+use yii\db\Schema;
 use yii\db\Migration;
 
 /**
- * Class m180512_003834_dbmigration1
+ * Class m180512_003834_dbmigration2
  */
-class m180512_003834_dbmigration1 extends Migration
+class m180512_003834_dbmigration2 extends Migration
 {
     /**
      * {@inheritdoc}
      */
     public function up()
     {
-        $this->execute(include __DIR__ . '/mescyt_time_managment.sql');
+        //$this->execute(include __DIR__ . '/mescyt_time_managment.sql');
+        $this->execute(file_get_contents(Yii::getAlias('@app').'/migrations/mescyt_time_managment.sql'));
     }
 
     /**
