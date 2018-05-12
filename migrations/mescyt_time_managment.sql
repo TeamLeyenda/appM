@@ -85,7 +85,7 @@
   -- Estructura de tabla para la tabla `invitado_honor`
   --
  CREATE TABLE `invitado_honor` (
-    `id_presentador` int(11) NOT NULL,
+    `id_invitado_honor` int(11) NOT NULL,
     `Nombre` varchar(50) NOT NULL,
     `Apellido` varchar(50) NOT NULL,
     `titulo` varchar(50) NOT NULL,
@@ -120,6 +120,12 @@
   ALTER TABLE `presentador`
     ADD PRIMARY KEY (`id_presentador`);
 
+ --
+  -- Indices de la tabla `presentador`
+  --
+  ALTER TABLE `invitado_honor`
+    ADD PRIMARY KEY (`id_invitado_honor`);
+
   --
   -- AUTO_INCREMENT de las tablas volcadas
   --
@@ -147,6 +153,12 @@
   --
   ALTER TABLE `presentador`
     MODIFY `id_presentador` int(11) NOT NULL AUTO_INCREMENT;
+
+  --
+  -- AUTO_INCREMENT de la tabla `presentador`
+  --
+  ALTER TABLE `invitado_honor`
+    MODIFY `id_invitado_honor` int(11) NOT NULL AUTO_INCREMENT;
   COMMIT;
 
   /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
