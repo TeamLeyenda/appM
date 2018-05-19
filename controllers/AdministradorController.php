@@ -14,6 +14,7 @@ use yii\filters\VerbFilter;
  */
 class AdministradorController extends Controller
 {
+
     /**
      * @inheritdoc
      */
@@ -34,7 +35,7 @@ class AdministradorController extends Controller
      * @return mixed
      */
     public function actionIndex()
-    {
+    {   $this->layout = 'admin';
         $searchModel = new AdministradorSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
