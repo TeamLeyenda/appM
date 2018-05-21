@@ -26,19 +26,4 @@ class m180512_003834_dbmigration2 extends Migration
 
         return false;
     }
-
-    /*
-    // Use up()/down() to run migration code without a transaction.
-    public function safeUp()
-    {
-
-    }
-
-    public function safeDown()
-    {
-        echo "m180512_003834_dbmigration1 cannot be reverted.\n";
-
-        return false;
-    }
-    */
 }

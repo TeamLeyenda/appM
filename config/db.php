@@ -2,9 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=mescyt_time_managment',
-    'username' => 'root',
-    'password' => '',
+    'dsn' => 'mysql:host=127.0.0.1;dbname=mescyt_time_managment',
+    'username' => 'cesar',
+    'password' => '123456',
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)
