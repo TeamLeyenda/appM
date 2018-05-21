@@ -83,7 +83,7 @@ AppAsset::register($this);
     <!-- copyright -->    
     <div id="copyright_area">  
         <p id="copyright">
-        &copy; 2018 MESCyT 
+        &copy; 2018 MESCyT-- test 
         </p>
 
                 <div id="copyrightmenu">
