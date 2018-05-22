@@ -162,3 +162,16 @@ ul li:hover ul li{
 	display: block;
 
 }
+
+
+
+/*Clase Cabecera de Imagen*/
+
+.Image-Header {
+    background-color: white
+    border: 1px;
+    padding: 25px;
+    margin: 0 0 25;
+
+
+}

@@ -28,7 +28,15 @@ AppAsset::register($this);
 
 
 <center>
-<?= Html::img('@web/img/MESCyT.jpeg',['height'=>"255"])?></center>
+
+<div class="Image-Header">
+    <!-- la imagen del logo -->
+    <div class='img-header-l'>
+    <?= Html::img('@web/img/color.png',['height'=>"150"])?>    
+    </div>
+</div>
+
+<!----></center>
 <div class="icemegamenu">
     <div class="ice-megamenu-toggle">
     	<ul align="center">

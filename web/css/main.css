@@ -1162,9 +1162,15 @@ body .fb_iframe_widget {
 		
 		body.iceshortcode a.carousel-control { color:#FFF}
 
-
-
-
-
-
+.Image-Header {
+    background-color: #D6DBDF;
+    border: 1px;
+    padding: 25px;
+    margin: 0 0 0 25;
+    overflow: hidden;
+	}
+.img-header-l{
+	/*position: absolute;*/
+    left: 150px;
+}
 	
