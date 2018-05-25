@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\AdministradorSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Administradors';
+$this->title = 'Administradores';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="administrador-index">

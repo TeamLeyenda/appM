@@ -49,6 +49,7 @@ $config = [
             'showScriptName' => true,
             'rules' => [
                 '<alias:\w+>' => 'site/<alias>',
+                '<alias:\w+>' => 'index/<alias>',
             ],
         ],
         
