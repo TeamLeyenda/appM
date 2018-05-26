@@ -1,4 +1,4 @@
-
+﻿
 -- phpMyAdmin SQL Dump
 -- version 4.8.0
 -- https://www.phpmyadmin.net/
@@ -62,11 +62,6 @@ CREATE TABLE `migration` (
 --
 
 INSERT INTO `migration` (`version`, `apply_time`) VALUES
-('m000000_000000_base', 1526085771),
-('m180512_003834_dbmigration1', 1526093768),
-('m180512_003834_dbmigration2', 1526690811),
-('m180512_030422_dbmigration2', 1526094364),
-('m180512_030730_dbmigration3', 1526094487),
 ('m180512_035832_migration2', 1526097551);
 
 -- --------------------------------------------------------
@@ -223,4 +218,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-

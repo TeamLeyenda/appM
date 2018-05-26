@@ -5,16 +5,20 @@
 
 use app\widgets\Alert;
 use yii\helpers\Html;
-//use yii\bootstrap\Nav;
-//use yii\bootstrap\NavBar;
+use yii\bootstrap\Nav;
+use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use yii\widgets\Menu;
+
+
 
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
+
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,78 +29,39 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
-
-<center>
-
-<div class="Image-Header">
+    <div class="Image-Header">
     <!-- la imagen del logo -->
-    <div class='img-header-l'>
-    <?= Html::img('@web/img/color.png',['height'=>"150"])?>    
+        <div class='img-header-l'>
+            <?= Html::img('@web/img/color.png',['height'=>"150"])?>    
+        </div>
     </div>
-</div>
+    <div id="mainmenu">
+         <?php 
+                 echo Menu::widget([
+            'items' => [
+                // Important: you need to specify url as 'controller/action',
+                // not just as 'controller' even if default action is used.
+                ['label' => 'Inicio', 'url' => ['site/index']],
+                // 'Products' menu item will be selected as long as the route is 'product/index'
+                ['label' => 'Conferencias', 'url' => ['product/index', 'tag' => 'new']],
+                ['label' => 'Registrar Eventos', 'url' => ['product/index', 'tag' => 'popular']],
+                ['label' => 'Estadísticas', 'url' => ['site/login']],
+                ['label' => 'Login', 'url' => ['product/index'],'visible' => Yii::$app->user->isGuest],
+            ],
+        ]);
+          ?>
+     </div>
+    </br>
+     <!-- esto es el contenido de la web -->
+                <?= $content ?>
 
-<!----></center>
-<div class="icemegamenu">
-    <div class="ice-megamenu-toggle">
-    	<ul align="center">
-			
-			<li><a href="home.html">Inicio</a></li>
-			
-			<li><a href="acceso.html">Acceso</a></li>
-
-			<li><a>Eventos</a>
-				<ul>
-					<li><a  href="conferencia.html">Conferencias</a></li>
-					<li><a href="registroevento.html">Registrar Eventos</a></li>
-					<li><a href="estadisticas.html">Estadísticas</a></li>
-					
-					
-				</ul>
-			</li>
-			
-			<li><a>Información</a>
-				<ul>
-					<li><a href="contacto.html">Contactos</a></li>
-					
-				</ul>
-			</li>
-
-        </ul>
-    </div>
-</div>
-
-
-
-
-        <!--
-<div class="wrap">
-    <?php
-    ?>
-
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        
-    </div>
-</div>
-        -->
-        <?= $content ?>
  </footer><!-- footer -->  
-    
-    
-    
     <!-- copyright -->    
     <div id="copyright_area">  
         <p id="copyright">
         &copy; 2018 MESCyT-- test 
         </p>
-
                 <div id="copyrightmenu">
-        
-
 <div class="custom"  >
 	<p><span style="color: #ffffff;">
     <span style="color: #999999;">--------------------------------------------------------------------------------------------------------------</span>

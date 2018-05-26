@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Participante;
 
 use app\models\EntryForm;
 
@@ -131,6 +132,18 @@ class SiteController extends Controller
     public function actionSay($message = 'Hello')
     {
         return $this->render('say', ['message' => $message]);
+    }
+
+    public function actionRegistro()
+    {
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        $model = new Participante();
+        return $this->render('registro', [
+            'model' => $model,
+        ]);
     }
 
     public function actionEntry()
