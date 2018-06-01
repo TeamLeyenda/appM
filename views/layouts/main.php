@@ -35,7 +35,7 @@ AppAsset::register($this);
             <?= Html::img('@web/img/color.png',['height'=>"150"])?>    
         </div>
     </div>
-    <div id="mainmenu">
+    <div  class="topnav" id="myTopnav">
          <?php 
                  echo Menu::widget([
             'items' => [
@@ -61,14 +61,13 @@ AppAsset::register($this);
 <div class="custom"  >
 	<p><span style="color: #ffffff;">
     <span style="color: #999999;">--------------------------------------------------------------------------------------------------------------</span>
-    <br />Av. Máximo Gómez No. 31, esq. Pedro Henríquez Ureña, Santo Domingo, República Dominicana<br />(809) 731 1100 | Fax: 809-731-1101</span><br /><span style="color: #ffffff;">
+    <br />Av. Máximo Gómez No. 31, esq. Pedro Henríquez Ureña, Santo Domingo, República Dominicana<br />(809) 731 1100 | Fax: 809-731-1101</span><br />
+    <span style="color: #ffffff;">
         <!-- This email address is being protected from spambots. -->
     <span class="cloaked_email ep_ae4919d3"><span data-ep-b7f95=".d&#111;" data-ep-a4b10="i&#110;&#102;">
-        <span data-ep-b7f95="&#103;&#111;b" data-ep-a4b10="&#111;&#64;&#109;"><span data-ep-a4b10="&#101;sc" data-ep-b7f95="&#121;&#116;&#46;"></span></span></span></span>
+        <span data-ep-b7f95="&#103;&#111;b" data-ep-a4b10="&#111;&#64;&#109;">
+            <span data-ep-a4b10="&#101;sc" data-ep-b7f95="&#121;&#116;&#46;"></span></span></span></span>
     </span></p></div>
-        </div>
-                <a href="#" class="scrollup" style="display: inline; ">Go Top</a>
-    </div><!-- copyright --> 
 </div><!-- Container --> 
 <?php $this->endBody() ?>
 </body>
