@@ -42,8 +42,7 @@ AppAsset::register($this);
                 ['label' => 'Inicio', 'url' => ['site/index']],
                 ['label' => 'Conferencias', 'url' => ['product/index', 'tag' => 'new']],
                 ['label' => 'Registrar Eventos', 'url' => ['product/index', 'tag' => 'popular']],
-                ['label' => 'Login', 'url' => ['site/login']],
-                ['label' => 'Estadísticas', 'url' => ['product/index'],'visible' => Yii::$app->user->isGuest],
+                ['label' => 'Login', 'url' => ['site/login'],'visible' => Yii::$app->user->isGuest],
             ],
         ]);
           ?>
