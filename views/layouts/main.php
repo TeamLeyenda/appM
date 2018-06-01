@@ -39,10 +39,7 @@ AppAsset::register($this);
          <?php 
                  echo Menu::widget([
             'items' => [
-                // Important: you need to specify url as 'controller/action',
-                // not just as 'controller' even if default action is used.
                 ['label' => 'Inicio', 'url' => ['site/index']],
-                // 'Products' menu item will be selected as long as the route is 'product/index'
                 ['label' => 'Conferencias', 'url' => ['product/index', 'tag' => 'new']],
                 ['label' => 'Registrar Eventos', 'url' => ['product/index', 'tag' => 'popular']],
                 ['label' => 'Estadísticas', 'url' => ['site/login']],
