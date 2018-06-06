@@ -1,10 +1,9 @@
-
 -- phpMyAdmin SQL Dump
 -- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-05-2018 a las 00:57:46
+-- Tiempo de generación: 06-06-2018 a las 05:02:41
 -- Versión del servidor: 10.1.31-MariaDB
 -- Versión de PHP: 7.2.4
 
@@ -38,6 +37,17 @@ CREATE TABLE `administrador` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `congreso`
+--
+
+CREATE TABLE `congreso` (
+  `id_congreso` int(11) NOT NULL,
+  `Nombre` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `horario`
 --
 
@@ -62,6 +72,12 @@ CREATE TABLE `migration` (
 --
 
 INSERT INTO `migration` (`version`, `apply_time`) VALUES
+('m000000_000000_base', 1526085771),
+('m130524_201442_init', 1528243842),
+('m180512_003834_dbmigration1', 1526093768),
+('m180512_003834_dbmigration2', 1526690811),
+('m180512_030422_dbmigration2', 1526094364),
+('m180512_030730_dbmigration3', 1526094487),
 ('m180512_035832_migration2', 1526097551);
 
 -- --------------------------------------------------------
@@ -128,6 +144,19 @@ CREATE TABLE `sala` (
   `Cantidad_Disponible` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ubicacion`
+--
+
+CREATE TABLE `ubicacion` (
+  `id_ubicacion` int(11) NOT NULL,
+  `Pais` varchar(50) NOT NULL,
+  `provincia` varchar(50) NOT NULL,
+  `id_congreso` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Índices para tablas volcadas
 --
@@ -137,6 +166,12 @@ CREATE TABLE `sala` (
 --
 ALTER TABLE `administrador`
   ADD PRIMARY KEY (`id_administrador`);
+
+--
+-- Indices de la tabla `congreso`
+--
+ALTER TABLE `congreso`
+  ADD PRIMARY KEY (`id_congreso`);
 
 --
 -- Indices de la tabla `horario`
@@ -175,6 +210,12 @@ ALTER TABLE `sala`
   ADD PRIMARY KEY (`id_sala`);
 
 --
+-- Indices de la tabla `ubicacion`
+--
+ALTER TABLE `ubicacion`
+  ADD PRIMARY KEY (`id_ubicacion`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -183,6 +224,12 @@ ALTER TABLE `sala`
 --
 ALTER TABLE `administrador`
   MODIFY `id_administrador` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `congreso`
+--
+ALTER TABLE `congreso`
+  MODIFY `id_congreso` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `horario`
@@ -213,6 +260,12 @@ ALTER TABLE `presentador`
 --
 ALTER TABLE `sala`
   MODIFY `id_sala` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `ubicacion`
+--
+ALTER TABLE `ubicacion`
+  MODIFY `id_ubicacion` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
