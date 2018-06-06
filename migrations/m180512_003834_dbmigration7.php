@@ -6,7 +6,7 @@ use yii\db\Migration;
 /**
  * Class m180512_003834_dbmigration2
  */
-class m180512_003834_dbmigration2 extends Migration
+class m180512_003834_dbmigration7 extends Migration
 {
     /**
      * {@inheritdoc}
@@ -22,7 +22,7 @@ class m180512_003834_dbmigration2 extends Migration
      */
     public function down()
     {
-        echo "m180512_003834_dbmigration1 cannot be reverted.\n";
+        echo "m180512_003834_dbmigration7 cannot be reverted.\n";
 
         return false;
     }
